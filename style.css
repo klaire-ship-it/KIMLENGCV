@@ -94,6 +94,32 @@ header p {
     display: flex;
 }
 
+/* Download Button Styling */
+.download-container {
+    margin-top: 12px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.download-btn:hover {
+    background-color: #216a9c;
+}
+
+.download-btn:active {
+    transform: scale(0.98);
+}
+
 /* Main Content Split (2 Column Desktop Grid) */
 .cv-content {
     display: grid;
@@ -215,5 +241,9 @@ h2 {
 
     .contact-social {
         justify-content: center;
+    }
+    
+    .download-container {
+        text-align: center;
     }
 }
