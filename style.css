@@ -1,198 +1,135 @@
-/* Base Reset & Design Variables */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heng Kimleng CV</title>
+    <!-- FIXED: Removed "css/" because style.css is in your main root folder -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #34495e;
-    --accent-color: #2980b9;
-    --text-color: #333333;
-    --bg-color: #f4f6f7;
-    --card-bg: #ffffff;
-}
+    <div class="cv-container">
+        
+        <!-- Header Section with Photo -->
+        <header>
+            <!-- FIXED: Removed "image/" because your photo is in your main root folder -->
+            <img src="photo_2026-07-04_13-38-41.jpg" alt="Your Profile Picture" class="profile-photo">
+            <div class="header-text">
+                <h1>Heng Kimleng</h1>
+                <p>University Student</p>
+                <div class="contact-info">
+                    <span>📧 sna13820@gmail.com</span>
+                    <span>📱 +855 15228871</span>
+                    <span>📍 Phnom Penh, Cambodia</span>
+                    <span>🔗 linkedin.com/in/hengkimleng</span>
+                </div>
+            </div>
+        </header>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    padding: 20px;
-}
+        
+        <div class="cv-content">
+            
+            <!-- Left Column: Experience & Education -->
+            <div class="main-column">
+                
+                <section>
+                    <h2>Profile Summary</h2>
+                    <p>A highly motivated Bachelor's student in Digital Economics 
+                       looking to kickstart a professional career. 
+                       Combines a solid understanding of digital markets and data skills 
+                       with strong multilingual abilities in Khmer, English, and Chinese. 
+                       Known for adaptability, a strong work ethic, and the ability to learn new software and tools quickly. 
+                       Ready to contribute positive energy and a hard-working attitude to a dynamic team.
+                    </p>
+                </section>
 
-/* Page Container Layout */
-.cv-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+                <section>
+                    <h2>Professional Experience</h2>
+                    
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Store Assistant & Translator</span>
+                            <span class="item-date"> - 2025</span>
+                        </div>
+                        <div class="item-company">Chinese Retail Store</div>
+                        <ul>
+                            <li>
+                                After graduated high school, I worked in a chinese store as a seller and translator for 3month. 
+                                I stopped working because the workplace was too far from my university which is hard for me to go to work on time. 
+                            </li>
+                        </ul>
+                    </div>
 
-/* Header Section styling */
-header {
-    border-bottom: 2px solid var(--bg-color);
-    padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    text-align: left;
-}
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Cashier & Barista</span>
+                            <span class="item-date">2026</span>
+                        </div>
+                        <div class="item-company">Milk Tea Shop</div>
+                        <ul>
+                            <li>
+                                I also worked in a MilkTea shop as a cashier for 6month. 
+                                I stopped working because I want to focus on my study and 
+                                I want to find a job that is related to my major.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
-/* Profile Photo Formatting */
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the image a perfect circle */
-    object-fit: cover; /* Prevents stretching */
-    border: 3px solid var(--accent-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+                <section>
+                    <h2>Education</h2>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Bachelor's Degree</span>
+                            <span class="item-date"> - 2026</span>
+                        </div>
+                        <div class="item-company">Faculty of Digital Economy</div>
+                    </div>
+                </section>
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
+            </div>
 
-header h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
+            <!-- Right Column: Skills & Languages -->
+            <div class="side-column">
+                
+                <section>
+                    <h2>Core Skills</h2>
+                    <ul class="skills-list">
+                        <li>Microsoft Office Suite</li>
+                        <li>Communication</li>
+                        <li>HTML & CSS</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                </section>
 
-header p {
-    color: var(--accent-color);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
+                <section>
+                    <h2>Key Projects</h2>
+                    <div class="item">
+                        <div class="item-title" style="font-size: 0.95rem; font-weight: bold; color: var(--secondary-color);">HAANG Smart POS User Manual</div>
+                        <p style="font-size: 0.85rem; color: #555; margin-top: 5px;">
+                            HAANG Smart POS is a free, cloud-based point-of-sale system built for Cambodian retail shops and cafes. 
+                            Its user manual provides a step-by-step guide for shop owners and staff to log in using Google, 
+                            set up their store details, organize product categories, and manage inventory. 
+                            Additionally, it walks cashiers through the main checkout screen to process daily orders, 
+                            add modifiers, handle discounts, and accept digital KHQR payments smoothly.
+                        </p>
+                    </div>
+                </section>
 
-.contact-info {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-    color: #666;
-}
+                <section>
+                    <h2>Languages</h2>
+                    <ul class="languages-list">
+                        <li>Khmer (Native)</li>
+                        <li>English (Fluent)</li>
+                        <li>Chinese (Basic)</li>
+                    </ul>
+                </section>
 
-/* Main Content Split (2 Column Desktop Grid) */
-.cv-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-}
+            </div>
 
-/* Typography Rules */
-section {
-    margin-bottom: 25px;
-}
+        </div>
+    </div>
 
-h2 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Item Lists formatting */
-.item {
-    margin-bottom: 20px;
-}
-
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    margin-bottom: 5px;
-}
-
-.item-title {
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-
-.item-company {
-    font-style: italic;
-    color: #555;
-}
-
-.item-date {
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-.item ul {
-    margin-left: 20px;
-    font-size: 0.95rem;
-}
-
-/* Badge Layouts for Skills & Languages */
-.skills-list, .languages-list {
-    list-style: none;
-}
-
-.skills-list li, .languages-list li {
-    background: var(--bg-color);
-    padding: 6px 12px;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-/* ==========================================================================
-   Responsive Breakpoint: Activates on screens 768px wide or smaller (Mobile)
-   ========================================================================== */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    .cv-container {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    /* Converts the 2-column desktop grid into a 1-column layout */
-    .cv-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Responsive header changes to stack image neatly over name */
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .item-header {
-        flex-direction: column;
-        gap: 2px;
-    }
-}
+</body>
+</html>
