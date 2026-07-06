@@ -1,0 +1,198 @@
+/* Base Reset & Design Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #2980b9;
+    --text-color: #333333;
+    --bg-color: #f4f6f7;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Page Container Layout */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header Section styling */
+header {
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+
+/* Profile Photo Formatting */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Prevents stretching */
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Main Content Split (2 Column Desktop Grid) */
+.cv-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* Typography Rules */
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Item Lists formatting */
+.item {
+    margin-bottom: 20px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.item-company {
+    font-style: italic;
+    color: #555;
+}
+
+.item-date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.item ul {
+    margin-left: 20px;
+    font-size: 0.95rem;
+}
+
+/* Badge Layouts for Skills & Languages */
+.skills-list, .languages-list {
+    list-style: none;
+}
+
+.skills-list li, .languages-list li {
+    background: var(--bg-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoint: Activates on screens 768px wide or smaller (Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .cv-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Converts the 2-column desktop grid into a 1-column layout */
+    .cv-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Responsive header changes to stack image neatly over name */
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
